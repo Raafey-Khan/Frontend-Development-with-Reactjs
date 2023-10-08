@@ -7,7 +7,7 @@
   like reading and understanding the structure of the HTML code.
 
 . The engine identifies HTML tags, like
- <html>, <head>, <body>, and breaks down the document into a structured format.
+ <html> <head> <body> and breaks down the document into a structured format.
 
 
 . It then constructs the DOM tree based
