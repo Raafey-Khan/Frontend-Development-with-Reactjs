@@ -1,0 +1,13 @@
+html,body{
+    display: flex;
+    
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.target-div{
+    border: 1px solid;
+    height: 200px;
+    width: 200px;
+}
+

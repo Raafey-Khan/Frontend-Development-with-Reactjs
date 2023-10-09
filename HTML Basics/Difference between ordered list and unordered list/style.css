@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.ordered-list{
+    border: 1px solid;
+    padding: 20px;
+}
+
+.unordered-list{
+    border: 1px solid;
+    padding: 20px;
+}
