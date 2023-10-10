@@ -8,4 +8,3 @@ Hey guys how's going so i'm dedicating myself for
 I hope i maintain and grow with incentive
 and celebrate every milestone that i will crack during
 this journey
-
