@@ -9,6 +9,3 @@ I hope i maintain and grow with incentive
 and celebrate every milestone that i will crack during
 this journey
 
-Update's will be here
-added tody's learning
-added tody's learning
