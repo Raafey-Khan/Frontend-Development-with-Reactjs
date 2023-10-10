@@ -9,4 +9,5 @@ I hope i maintain and grow with incentive
 and celebrate every milestone that i will crack during
 this journey
 
-Stay Hungry , Stay Focused
+Update's will be here
+added tody's learning
