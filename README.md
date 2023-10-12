@@ -7,4 +7,4 @@ Hey guys how's going so i'm dedicating myself for
 6 to 7 months into learning so deep dive into Frontend-Development
 I hope i maintain and grow with incentive
 and celebrate every milestone that i will crack during
-this journey
+this journeys̄
