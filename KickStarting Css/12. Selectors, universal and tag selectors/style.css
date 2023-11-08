@@ -1,0 +1,25 @@
+*{
+    /* This is a universal selector, whatever you write here is applied to everyting */
+    
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3f2ef;
+}
+
+header{
+    background-color: white;
+}
+
+.mid-text{
+    font-weight: bolder;
+    font-size: medium;
+}
+
+#head-text{
+     text-decoration-line: line-through; /* you often seen this in buying something like reducting its price and mentioning the offer ones deal price */
+}
+
+
+/* Universal selector means manually selecting everything where its p tag a tag h1 tag everytihng manually */
