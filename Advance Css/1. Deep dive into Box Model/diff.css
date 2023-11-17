@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+#demo{
+    width: 200px;
+    border: solid red 5px;
+
+    /* and if i write width= 100% 
+        it will take the width to whole page */
+    /* border-style: dotted;
+       border-width: 5px;
+       border-color: red; */
+
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* We usuallly know div are block elements they will be present below cause of their full line occurance 
+
+Now inside these box model there is 
+One More Component Called Margin
+
+Margin = Tha Space Outside of your box*/
+#demo2{
+    width: 200px;
+    border: solid red 5px;
+
+    /* and if i write width= 100% 
+        it will take the width to whole page */
+    /* border-style: dotted;
+       border-width: 5px;
+       border-color: red; */
+
+    padding: 10px;
+}
