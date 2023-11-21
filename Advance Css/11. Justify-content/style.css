@@ -1,0 +1,55 @@
+/* Justify content helps us to see 
+Along the Main-axis How the element should be arranged */
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#parent{
+    /* flex container */
+    border: solid red 10px;
+    display: flex;
+    height: 500px;
+    /* flex direction: row */
+    /* flex wrap: nowrap */
+    /* 2 in 1 way */
+    /* use */ 
+    flex-flow: row nowrap;
+
+    /* New concept */
+    justify-content: center; /* To arrange elements on main axis */
+    
+}
+
+/* Default nature harkate flex ki
+
+they try to take as big space available 
+of their parent */
+
+#parent div {
+    /* flex items */
+    border: solid blue 2px;
+    padding: 20px;
+    background-color: bisque;
+    /* max-width has not defined by us */
+    min-width: 100px; 
+    /* max-width is defined by the content until unless there is
+    another type of restriction */
+
+    max-width: 200px; /* < if you didnt declare this then the content will automaticallly allocate width as needed */
+    max-height: 100px;
+}
+
+
+.Working-of-Justify-Content{
+    justify-content: start;
+    justify-content: end;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+}

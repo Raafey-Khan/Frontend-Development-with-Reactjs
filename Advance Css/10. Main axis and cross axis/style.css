@@ -1,0 +1,40 @@
+/* Dealing with flex
+  you need to understand 2 things
+  
+1 .) Main Axis
+
+2 .) Cross Axis*/
+
+
+.example{
+    flex-direction: column;
+
+    /* The flex-direction help's us to
+    define 2 axis
+
+    1. Main Axis
+    2. Cross Axis
+    
+    */
+}
+
+
+.Main-Axis{
+
+/* The main axis ways that flex-direction gives us */
+
+/*1*/    flex-direction: row;
+/*2*/    flex-direction: row-reverse;
+
+}
+
+/* | <-- 90degree perpendicular to that is your cross axis */
+
+.Cross-Axis{
+
+/*3*/    flex-direction: column;
+/*4*/    flex-direction: column-reverse;
+
+}
+
+/* In Next Part were gonna start from Main Axis */
