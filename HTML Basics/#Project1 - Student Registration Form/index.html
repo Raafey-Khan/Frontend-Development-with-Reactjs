@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Student Registration form</title>
 </head>
-<body>
+<body style="border: 3px solid;">
 
     <h1 align="center">Student Registration Form...</h1>
 
     <form>
-    <table align="center" cellpadding="10">
-        <tr>
+    <table  align="center" cellpadding="10">
+        <tr >
             <td><label for="firstname"> First name: </label></td>
         <td><input type="text" placeholder="firstname" name="firstname" id="firstname" maxlength="40"></td>
         <td><p>(max 20 characters a-z and A-Z)</p></td>
@@ -126,9 +126,12 @@
         </td>
        </tr>
        <tr>
+        <tr>
         <td>
 
-        <label for="course">Course:</label>
+           <tr>
+        <td>Course:</td>
+        <td>
         <select align="center" id="course" name="course">
             <option value="Select course">Select Course</option>
             <option value="BCA">BCA</option>
@@ -137,6 +140,8 @@
             <option value="BACHELORS">BACHELORS</option>
             <option value="MASTERS">MASTERS</option>
         </select><br><br>
+    </td>
+    </tr>
     
         </td>
     
