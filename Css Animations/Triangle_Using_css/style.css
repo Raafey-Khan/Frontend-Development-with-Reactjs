@@ -1,0 +1,26 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-right{
+    /* Reverse algorithm for Arrow left means the border solid will be opposite, so right */
+    width: 0;
+   
+    height: 0;
+    border-left: 300px solid;
+    border-right: 300px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-top: 300px solid transparent;
+}
+
