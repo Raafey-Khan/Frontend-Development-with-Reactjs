@@ -9,7 +9,6 @@
 . The engine identifies HTML tags, like
  <html> <head> <body> and breaks down the document into a structured format.
 
-
 . It then constructs the DOM tree based
  on these tags and their relationships,
   creating a tree structure that represents the page's structure.
