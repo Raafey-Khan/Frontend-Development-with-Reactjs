@@ -1,0 +1,35 @@
+html{
+    box-sizing: border-box;
+    
+}
+
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.container{
+    background-color:antiquewhite;
+}
+
+.main{
+    background-color: black;
+    color: #fff;
+    height: auto;
+    width: 278px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.btn{
+    height: auto;
+    width: 40px;
+}
