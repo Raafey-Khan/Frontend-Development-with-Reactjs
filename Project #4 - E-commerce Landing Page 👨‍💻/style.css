@@ -1,0 +1,69 @@
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+.h:hover{
+    background-color: #c6c7c8;
+    color: #fff;
+}
+
+
+.custom-divider{
+    height: 3rem;
+    background-color: #fff;
+}
+
+.product-image{
+    max-height: 150px;
+    max-width: 200px;
+}
+
+/* Custom changes */
+
+.bg-body-tertiary {
+
+    background-color: #2f2f2f!important;
+    opacity: 0.90;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    color: rgb(255 255 255)!important;
+ 
+}
+
+.nav-link {
+
+    color: rgb(255 255 255 / 65%)!important;
+
+}
+
+
+.btn-outline-success {
+
+    background-color: white!important;
+    
+}
+
+.distort{
+    
+    height: 197px;
+    object-fit: contain;
+    padding-top: 0.5rem;
+      
+      
+}
+
+.r{
+    margin-bottom: 3rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #464646!important;
+}
