@@ -1,0 +1,140 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.first-image, .second-image, .third-image, .fourth-image{
+    background-position:  center;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+
+.first-image{
+    background-image: url(img/1.jpeg);
+    min-height: 400px;
+    opacity: 0.8;
+}
+
+.second-image{
+    background-image: url(img/2.webp);
+    min-height: 400px
+}
+
+.third-image{
+    background-image: url(img/3.jpeg);
+    min-height: 400px
+
+}
+
+.fourth-image{
+    background-image: url(img/1.jpeg);
+    min-height: 400px;
+    opacity: 0.8;
+}
+
+
+section{
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 55px;
+    padding-right: 46px;
+
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #0f0f0f;
+}
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.image{
+    /* first positon ancestors */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative; /* Normal flow Parent*/
+
+}
+
+.image div{
+    /* Play with the chldren opposite to flex */
+    position:  absolute; /* this goint to be placed with respect to the parent positon ancestor relativ */
+    top: 50%;
+    width: 100%;
+    text-align: center; 
+    /* Were able to use text align center
+    because the div space is 100% of the parent */
+    color: white;
+    font-size: 30px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.first-image span{
+    
+    color: white;
+    background-color: #111;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.my-nav, ul{
+    background-color: #575656;
+    display: flex;
+  
+    align-items: center;
+   
+    
+}
+
+ul{
+    position: absolute;
+    left: 60%;
+    color: rgb(61, 61, 61);
+    background-color: #d4d4d4;
+    padding: 0.6rem;
+    gap: 2.3rem;
+    border-radius: 4px;
+    justify-content: space-evenly;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+nav h3{
+    margin-left: 6rem;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    -webkit-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.38);
+-moz-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.38);
+box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.38);
+}
+
+footer{
+    padding: 2.3rem;
+    background-color: #575656;
+    width: 100%;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
+
