@@ -1,0 +1,72 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+    margin: 0;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 36px;
+    border-radius: 8px;
+    width: 83px;
+    background-color: #fff;
+    background-color: #1f1f1f;
+
+}
+.weather-box{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.txt:first-child{
+    font-size: 4px;
+}
+
+.weather-img img{
+    height: 19px;
+    width: 19px;
+    
+}
+.txt p{
+    font-size: 7px;
+    color: white;
+}
+.location-icon{
+    font-size: 4px;
+   
+}
+
+.txt{
+    font-size: 9px;
+    margin: 0;
+}
+
+.txt a{
+    font-size: 4px;
+  
+}
+
+.blue-txt {
+    color: #80a6e4;
+    font-size: 4px;
+
+}
+
+
+.weather-arrow{
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+}
