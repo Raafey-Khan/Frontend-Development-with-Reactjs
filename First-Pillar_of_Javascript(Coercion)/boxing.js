@@ -20,6 +20,7 @@ console.log(/*1.toString()*/)  // it gives me error cause 1(int) is primitive
 
 console.log("abc".toString());
 
+
 // another edge case
 
 console.log(undefined.toString()); //it again throws error
