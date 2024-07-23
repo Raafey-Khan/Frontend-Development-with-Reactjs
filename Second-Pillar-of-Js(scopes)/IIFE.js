@@ -1,0 +1,2 @@
+// Immediatly invoked functional expression
+
