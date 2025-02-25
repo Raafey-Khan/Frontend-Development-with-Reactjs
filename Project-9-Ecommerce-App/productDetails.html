@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/productDetails.css">
+</head>
+<body>
+
+
+    
+    <div class="loader-backdrop" id="loader-backdrop">
+        <div class="loader2">
+            <div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="productDetailsPage">
+        <nav id="header">
+
+            <div class="container">
+
+                <div class="row">
+
+
+                    <div class="header-wrapper d-flex justify-content-between">
+                    <!-- we have made this div flex, with justify content as space between -->
+                    
+                         <div class="logo d-inline-block">
+                            <a href="index.html" class="text-decoration-none">Shop Cart</a>
+                         </div>
+                         
+                         
+                         <div class="user-actions d-flex flex-row">
+                            <a href="cart.html">Cart</a>
+                            <div class="user-intro" id="userIntro">Hi User</div>
+                            <div class="logout-btn" id="logout-Btn">Logout</div>
+                         </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </nav>
+        <!-- Product Details  -->
+
+
+        <div class="container">
+            <div class="row">
+                <div class="product-details-wrapper d-flex justify-content-between align-items-start flex-row ">
+                    <div class="product-img d-flex" >
+                        
+                        <img id="product-img" src="" alt="product-image" >
+                    
+                    </div>
+
+
+                    <div class="product-details-box d-flex flex-column">
+                        <div id="productDetails">
+                            <!-- Product details -->
+                            <div class="product-name" id="product-name"></div>
+                            <div class="product-price fw-bold" id="product-price"></div>
+                            <div class="product-description">
+                                <div class="product-description-title fw-bold" id="product-price">Description</div>
+                                <div class="product-description-data" id="product-description-data"></div>
+                            </div>
+                        </div>
+                        <div class="product-details-action btn btn-primary text-decoration-none"> Add to cart</div>
+                           <a href="cart.html" id="goToCartBtn" class="product-details-action btn btn-warning text-decoration-none">Go to cart</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/common.js"></script>
+    <script src="js/productDetails.js"></script>
+</body>
+</html>
+
