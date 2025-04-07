@@ -1,0 +1,15 @@
+{
+  "name": "machine_coding_interview_making_a_pubsub_library",
+  "version": "1.0.0",
+  "main": "Pubsub.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
