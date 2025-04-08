@@ -1,3 +1,0 @@
-what is npx
-
-npx --> it helps us to run a package in terminal
