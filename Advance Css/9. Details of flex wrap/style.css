@@ -1,0 +1,31 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#parent{
+    /* flex container */
+    border: solid red 10px;
+    display: flex;
+    /* flex direction: row */
+    /* flex wrap: nowrap */
+    /* 2 in 1 way */
+    /* use */ 
+    flex-flow: row wrap;
+}
+
+#parent div {
+    /* flex items */
+    border: solid blue 2px;
+    padding: 20px;
+    background-color: bisque;
+    /* max-width has not defined by us */
+    min-width: 100px; 
+    /* max-width is defined by the content until unless there is
+    anoher type of restriction */
+
+    max-width: 400px; /* < if you didnt declare this then the content will automaticallly allocate width as needed */
+}

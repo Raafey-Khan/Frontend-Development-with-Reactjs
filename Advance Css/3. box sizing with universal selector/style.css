@@ -1,0 +1,31 @@
+html{
+    /* Unles changed, every element has box-sizing as border-box */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    /* We allow the child to follow the parent box sizing */
+    box-sizing: inherit;
+}
+
+#demo{
+    width: 200px;
+    border: solid red 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#demo2{
+    width: 200px;
+    border:  solid red 5px;
+   
+    box-sizing: content-box;
+   
+}
+
+#demo3{
+    border: solid blue 15px;
+    width: 150px;
+    /* if you give width 100% it will take maximum
+       width given by the parents */
+}

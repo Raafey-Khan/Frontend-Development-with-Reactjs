@@ -1,0 +1,42 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.container{
+    height: 100vh;
+    border: 10px solid red;
+    width: 100%;
+
+    /* this will be our flex-container  */
+    /* also parent container will be used for mananging the flex items cause its possesing the power of flex-container and their children wont have any excuse to not to listen to them hahaha */
+    display: flex;
+    flex-direction: column;
+    
+    
+    align-items: center; 
+    /* Here haha am right align items 
+    working as justify-content 
+    cause we made the direcion 
+    as column instead of its default
+     condition row , 
+     so align items is working as xaxis here 
+     cool let see how jc working im super excited */
+
+     justify-content: center;
+     /* by making the flex-container as column we just changed the sides x beccamed y and y becamed x 
+     and now the soldier has the quality to work as x is working as y
+     and the soldier whos quality to work as y is working as x
+     why because their parent just changed the ground condition */
+
+}
+
+.jc-al-box{
+    height: 200px;
+    width: 200px;
+    border: 2px solid;
+    
+}

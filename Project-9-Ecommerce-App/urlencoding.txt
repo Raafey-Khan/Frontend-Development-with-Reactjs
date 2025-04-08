@@ -1,0 +1,42 @@
+if you see any kind of like apostrophy
+
+like space 
+
+
+!
+
+"
+
+&
+
+() any kind of character the url is encoded in percentage like
+
+
+lets say space 
+
+
+character               From Windows-1252            From UTF-8
+
+Space                       %20                          %20
+
+
+'                            %27                        %27
+
+
+so as in the categories we populate categories
+
+like forEach(categories => {
+    and here we passed in the href
+
+    CategoryItem.href = `productList.html?category={categories}`
+
+    and like from here we are making the categoriescome up in url encoding
+
+    so if space it will show %20
+    and if there is like ' then it will show %27
+
+    thats why in the mens category it is shwoing
+
+    /productList.html?category=men%27s%20clothing   // url encoded way
+    its just like /productList.html?category=men's clothing // normal way
+})

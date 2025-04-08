@@ -1,0 +1,28 @@
+/* There are three ways you can apply css
+
+
+1.) Inline -- Presents in the attribute place of html tag
+
+2.) Internal -- Cause Present in the Same html file
+
+3.) External -- Presents in another file but hyperlinked in html head using link tag */
+
+
+
+/* Selector Means
+
+your Selecting a Bunch of HTML elements */
+
+
+/* 
+IN Link tag href="style.css"
+ 
+The href here meand Hyperreference
+
+
+
+There's time when you have to use css but its hosted on the interned
+
+so for using css from not your local machine but from a remote server
+
+then also you have to use the link tag to link that hosted css in your html document*/

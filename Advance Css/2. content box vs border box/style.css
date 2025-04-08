@@ -1,0 +1,77 @@
+.firstdiv{
+    box-sizing: content-box;
+    width: 100%;
+    border: 1px solid;
+}
+
+/* The Old way to write box-model */
+
+*{
+    box-sizing: border-box;
+}
+.seconddiv{
+      /* Means Default */
+    width: 100%;
+    padding: 10px;
+    background: red;
+    box-sizing: inherit;
+    /* inherits the box sizing of the parent element */
+}
+
+/* look how big diff we can see it 2 box model reacts under a parent*/
+
+.thirddiv{
+    /* Here padding margin border all comes in 100% of the parent */
+    box-sizing: border-box;
+    width: 100%;
+    border: solid #5B6DCD 10px;
+    padding: 5px;
+}
+
+/* Why to use box model you got a question right so
+
+ans)  The meaning of content box and Border box is
+
+       You can actually figure out whether you want to 
+       include - Padding and The Border Width in your given width or not*/
+
+       /* So width is consider as padding and border width and overall is 100% to the content is border
+       
+       and  in the content box model the width is calculated + padding + border-width */
+
+
+/*Summary - 
+1) box-sizing: content:box(default) / border-box
+2)  p{width: 100%} - 
+content box- the content gets 100% of the width and the padding , border overflows out of the box
+border-box- here the whole box including border gets 100% of the width
+3) image illustration of content box vs border box - https://i0.wp.com/css-tricks.com/wp-content/uploads/2010/09/widthbox.png?w=367&amp;ssl=1 */
+
+
+
+/* CONTENT-BOX = Content-box for remember = the default.
+and  Width and Height valeus apply to the element's content only. The padding and border are added to the outside of the box*/
+
+
+/* PADDING-BOX = padding-box: Width and height values apply to the element's content and its
+   padding. The border is added to the outside of the box, Currently, only Firefox supports
+   the padding-box value */
+
+
+/* BORDER-BOX = Border-box: Width and Height values apply to the content, padding, and border,*/
+
+/* INHERIT = inherit: inherits the box sizing of the parent element */
+
+
+
+/* The Optimal way to write box model is */
+
+/* Every time before start writing the css */
+html{
+    box-sizing: border-box;
+
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}

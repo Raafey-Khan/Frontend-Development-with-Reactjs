@@ -1,0 +1,9 @@
+/* 
+
+Every object has a prototype property
+which is an object in itself
+
+
+You can attach new functionalities in this prototypes
+after creation of object
+*/

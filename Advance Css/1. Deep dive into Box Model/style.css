@@ -1,0 +1,55 @@
+body{
+    transition: 9s;
+}
+#demo{
+
+    /* Also this method is called shorthand css operations on border */
+    width: 200px;
+    /* The moment i wrote this property can you see it srinked what actually happening */
+    border: solid red 5px; 
+    /* This is called normal border
+     its just defines
+      which border we want and after we can apply
+       styles like type solid color red and
+        width of the border is 5px hah */
+    margin-bottom: 2%; /*using a margin to separate */
+    
+    /* Lets try giving an internal spac
+    e to the content div id demo,
+     cause
+     in past we were playing with border and
+      now its time to look how internal space ,
+      what called padding works like */
+    /* width: 40px;  */
+    /*padding-left: 350px;  The content is as it is but the upper layer padding is getting in action */
+}
+
+#memo{
+    /* You can define which type of bdr you want */
+    border: dotted red 5px;
+    margin-bottom: 2%;
+}
+
+
+/* Also One way you can acheive these stylings for border */
+
+
+#remo{
+    /* This is called long hand */
+    border-style: dotted;
+    border-color: blue;
+    border-width: 6px;
+}
+
+/* Lemme teach you how padding works in css
+
+
+
+Imagine a Chips Packet
+
+Packet = Border that we can see using 1px solid or dotted whtever
+
+Chips = Is our content that can be handled by defining a width or height to it
+
+Air = The Air is the Padding That our chips is in ,
+as the air increases internal space of the chips packet*/
