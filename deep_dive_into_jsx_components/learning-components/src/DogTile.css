@@ -1,0 +1,14 @@
+.first, .second {
+    height: 400px;
+    width: 400px;
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.puppy{
+    display: flex;
+}
