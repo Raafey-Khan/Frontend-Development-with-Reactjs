@@ -26,18 +26,19 @@ class Pubsub {
 
 
 
-const pb = new Pubsub();
+const ab = new Pubsub();
 
-const unsubAirforce1 = pb.subscribe('airforce', (data) => console.log("Subscriber 1 of airforce", data));
+const unsubAirforce1 = ab.subscribe('airforce', (data) => console.log("Subscriber 1 of airforce", data));
 
-const unsubAirforce2 = pb.subscribe('airforce', (data) => console.log("Subscriber 2 of airforce", data));
+const unsubAirforce2 = ab.subscribe('airforce', (data) => console.log("Subscriber 2 of airforce", data));
 
-const unsubNewBalance1 = pb.subscribe('new balance', (data) => console.log("Subscriber 1 of new balance", data));
+const unsubNewBalance1 = ab.subscribe('new balance', (data) => console.log("Subscriber 1 of new balance", data));
 
-// pb.publish('airforce', {shoeName: 'jordan airforce'});
+ab.publish('airforce', {shoeName: 'jordan airforce'});
+unsubAirforce1();
+ab.publish('airforce', {shoeName: 'jordan new shoes'})
 // pb.publish('new balance', {shoeName: 'something'});
 // unsubAirforce2();
 // unsubAirforce1();
 // pb.publish('airforce', {shoeName: 'jordan new shoes'})
 
-console.log(pb.subscribes);
