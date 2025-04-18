@@ -1,0 +1,11 @@
+.todo-done {
+    text-decoration: line-through;
+}
+
+.todo-notdone{
+    text-decoration: none;
+}
+
+.Rafnone{
+    display: none;
+}
