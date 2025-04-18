@@ -33,20 +33,17 @@ function Todo(props) { {/* parent component Todo */}
     onChange={(e) => {
         setInputText(e.target.value)
 
-        if (inputText == ''){
-            document.getElementById('add-todo-btn').removeAttribute('disabled')
-        } else{
-            document.getElementById('add-todo-btn').setAttribute('disabled', 'true')
-        }  
+      
         
     }
     } 
     />
 
-    <button id="add-todo-btn" disabled 
+    <button id="add-todo-btn"
     onClick={() => {
        
         setTodoItems([...todoItems, {data: inputText, id: (new Date()).getTime()   }])
+        setInputText("")
         
         
     }
