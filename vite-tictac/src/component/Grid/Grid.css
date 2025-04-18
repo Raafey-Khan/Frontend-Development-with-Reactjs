@@ -1,0 +1,8 @@
+.grid{
+    height: 315px;
+    width: 315px;
+    display: flex;
+
+    gap: 1rem;
+    justify-content: space-between;
+}
