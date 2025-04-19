@@ -1,8 +1,33 @@
-.grid{
-    height: 315px;
-    width: 315px;
-    display: flex;
 
+
+.grid{
+    height: 500px;
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+   
+    align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-between;
+   
+
+}
+.turn-highlight{
+    color: white;
+}
+
+
+.winner-reset-section{
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+}
+
+.reset{
+    padding: 1rem; 
+    color: white;
+    background-color: var(--resetGreen);
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
 }

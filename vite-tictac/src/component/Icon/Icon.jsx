@@ -5,9 +5,7 @@ function Icon({name}) {
         return <FaRegCircle/>
       } else if(name == 'cross'){
         return <FaTimes />
-      } else{
-        return <FaPen/>
-      }
+      } 
 }
 
 
