@@ -1,4 +1,4 @@
-import '../CSS/Tweet.css'
+import '../CSS/Tweet.css';
 import { useState } from 'react';
 function Tweet({tweetId, content, likeCount, createdAt, onEdit}) {
     const [isEditing, setIsEditing] = useState(false);
