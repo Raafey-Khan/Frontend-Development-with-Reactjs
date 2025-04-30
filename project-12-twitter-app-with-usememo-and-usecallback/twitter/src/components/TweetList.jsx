@@ -1,12 +1,20 @@
+import '../CSS/TweetList.css'
 import Tweet from "./Tweet";
 
-function TweetList({tweets}) {
+function TweetList({tweets, onEditTweet}) {
     return(
-        <ul>
+        <ul className='tweet-list'>
             {
                 tweets.map((tweet) => (
-                    <li>
-                        <Tweet content={tweet.content} likeCount={tweet.likeCount} />
+                    <li className='tweet-like-wrapper' key={tweet.id}>
+                        <Tweet 
+                        tweetId={tweet.id}
+                        content={tweet.content} 
+                        likeCount={tweet.likeCount} 
+                        createdAt={tweet.createdAt.toString()} 
+                        onEdit={onEditTweet}
+                        
+                        />
                     </li>
                 ))
             }
