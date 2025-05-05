@@ -48,7 +48,7 @@ let id : number = 5;
 
 let firstName : string = 'Raafay khan';
 
-firstName = 12; // an error of number is not assignable to type stirng
+//firstName = 12; // an error of number is not assignable to type stirng
 
 // every time you want to define a variable in type script
 
@@ -60,7 +60,7 @@ firstName = 12; // an error of number is not assignable to type stirng
 
 
 
-var lastName : string = 'signh';
+var lastName : string = 'sign';
 // lastName = 13; <---- see
 
 // what about var ? same goes for var same goes for let 
