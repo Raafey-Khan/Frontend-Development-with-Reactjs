@@ -21,7 +21,7 @@ type unionOfstradnum = number | string; // only in type
 
 
 interface ComplexNumber {
-    real : number,
+    real : number | string,
     imaginary: number
 }
 
