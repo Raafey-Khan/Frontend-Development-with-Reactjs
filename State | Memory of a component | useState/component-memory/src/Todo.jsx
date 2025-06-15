@@ -8,19 +8,27 @@ function Todo() {
 
     const [newTodo, setNewTodo] = useState("");
 
+   
 
 
+ function deleteCurrentTodo(mainidx) {
+   const filteredTodo = todos.filter((_, index)=> index !== mainidx);
+   setTodos(filteredTodo);
+ }
     
     return(
         <div id='hello'>
         
 
-       <input type="text" placeholder='new Todo..' 
+       <input type="text" placeholder='new Todo..'  value={newTodo}
             onChange={(event)=> setNewTodo(event.target.value)}
        />
        <br />
-       <button onClick={()=> setTodos([...todos, newTodo])}>Add todo</button>
-       <TodoList todos={todos} /> 
+       <button onClick={()=> { 
+        setNewTodo('')
+        setTodos([...todos, newTodo])
+        }}>Add todo</button>
+       <TodoList todos={todos} deleteCurrentTodo={deleteCurrentTodo} /> 
 
        <button onClick={() => setTodos([])}>delete</button>
          

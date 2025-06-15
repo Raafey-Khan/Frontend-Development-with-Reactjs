@@ -3,15 +3,13 @@ import TodoContext from "../context/TodoContext";
 
 function AddTodo() {
 
-    const {todos, dispatch} =  useContext(TodoContext);
+    const {dispatch} =  useContext(TodoContext);
       
 
     const [todoText, setTodoText] = useState('');
 
     function addTodo(todoText) {
-        let nextId = todos.length + 1;
-           dispatch({type: 'add_todo', payload: {todoText}});
-            setTodoText('')
+        dispatch({type: 'add_todo', payload: {todoText}})
     }
 
     return(

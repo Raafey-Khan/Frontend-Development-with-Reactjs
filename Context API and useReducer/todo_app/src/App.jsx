@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-    <TodoContext.Provider value={{todos, dispatch}}>
+    <TodoContext value={{todos, dispatch}}>
       {/* in order to trigger an action we have
       to call the  dispatch method takes only one argument that is 
       plain action javascript object 
@@ -49,7 +49,7 @@ function App() {
     <AddTodo   />
     <TodoList   /> 
     {/* now inside all of the components will have the access to the TodoContext document */}
-      </TodoContext.Provider> 
+      </TodoContext> 
   
     </>
   )
