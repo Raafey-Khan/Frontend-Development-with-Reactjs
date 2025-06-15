@@ -3,10 +3,16 @@ import TodoContext from "../context/TodoContext";
 
 function AddTodo() {
 
-    const {todos, setTodos} =  useContext(TodoContext);
+    const {todos, dispatch} =  useContext(TodoContext);
       
 
     const [todoText, setTodoText] = useState('');
+
+    function addTodo(todoText) {
+        let nextId = todos.length + 1;
+           dispatch({type: 'add_todo', payload: {todoText}});
+            setTodoText('')
+    }
 
     return(
         <>
@@ -16,8 +22,8 @@ function AddTodo() {
        
         />
         <button  onClick={() => {
-           let nextId = todos.length + 1;
-           setTodos([...todos, {id: nextId, text: todoText, isFinished: false}])
+            addTodo(todoText)
+          
             setTodoText('')
            
         }  }
