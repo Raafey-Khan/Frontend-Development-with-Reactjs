@@ -1,15 +1,21 @@
 import './Form.css'
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import validatePassword from '../../helper/passwordValidator';
 import validateEmail from '../../helper/emailValidator';
 function Form() {
+
+    const exampleRef = useRef(0);
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        console.log(exampleRef);
+    })
 
 
     const [formValues, setFormValues] = useState({
         email: "",
         password: ""
     });
-
 
 
     const handleFormSubmit = (event) => {
@@ -43,6 +49,12 @@ function Form() {
         <div>
 
         New Form
+
+
+        Count: {count} <br />
+        Exampleref: {exampleRef.current}  <br />
+        <button onClick={() => setCount(count+1)}>Update Count</button>  
+        <button onClick={() => exampleRef.current++} >Update Ref</button>
 
         <form onSubmit={handleFormSubmit} >
 
