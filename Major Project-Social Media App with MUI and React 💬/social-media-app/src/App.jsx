@@ -1,11 +1,11 @@
 
 import './App.css'
-import Button from '@mui/material/Button';
+import SocialApp from './components/SocialApp'
 function App() {
 
   return (
     <>
-<Button variant='contained'>Hello World</Button>
+    <SocialApp/>
     </>
   )
 }
