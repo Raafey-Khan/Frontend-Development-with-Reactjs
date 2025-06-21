@@ -2,7 +2,7 @@ import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
-import PostCard from '../PostCard';
+import PostCardList from '../PostCardList/PostCardList';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -30,10 +30,7 @@ export default function RowAndColumnSpacing() {
         direction={'column'} 
         size={{xs: 11, md: 9}}>
             {/* Posts */}
-            <PostCard/>
-            <PostCard/>
-            <PostCard/>
-            <PostCard/>
+            <PostCardList/>
         </Grid>
         
        
