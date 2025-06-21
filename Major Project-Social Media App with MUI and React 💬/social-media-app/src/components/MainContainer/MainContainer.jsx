@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import PostCardList from '../PostCardList/PostCardList';
-
+import UserList from '../UserList/UserList'
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: '#fff',
   ...theme.typography.body2,
@@ -17,18 +17,18 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function RowAndColumnSpacing() {
   return (
-    <Box display='flex' justifyContent='center' sx={{ width: '100%', mt: '3rem' }}>
+    <Box display='flex' justifyContent='space-around' sx={{ width: '100%', mt: '3rem' }}>
       <Grid container justifyContent={'center'} alignItems={'start'}  rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid size={{ xs: 1, md: 3}}>
-            {/* Users */}
-          text 1
+        <Grid size={{ md: 6}}>
+            <UserList/>
+          
         </Grid>
         <Grid 
         container 
         alignItems={'center'} 
         justifyContent={'center'} 
         direction={'column'} 
-        size={{xs: 11, md: 9}}>
+        size={{ md: 6}}>
             {/* Posts */}
             <PostCardList/>
         </Grid>
