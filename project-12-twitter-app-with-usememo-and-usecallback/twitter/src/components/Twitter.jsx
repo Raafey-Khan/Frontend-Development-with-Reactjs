@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 import '../App.css'
 import AddTweet from './AddTweet';
 import TweetList from './TweetList';
@@ -11,6 +11,7 @@ const initialDummyTweets = [
   ];
 
   const MemoisedAddTweet = memo(AddTweet)
+  
 
 function Twitter(){
     const [tweets, setTweets] = useState(initialDummyTweets)
