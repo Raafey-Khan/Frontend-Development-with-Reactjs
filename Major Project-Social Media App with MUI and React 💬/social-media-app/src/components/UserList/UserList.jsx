@@ -21,7 +21,7 @@ export default function CheckboxListSecondary() {
        })
        .then(response => {
          const responseObject = response.data;
-         console.log(responseObject.data);
+        //  console.log(responseObject.data);
         //   console.log(import.meta.env.VITE_APP_ID)
 
          setUsers([...responseObject.data])

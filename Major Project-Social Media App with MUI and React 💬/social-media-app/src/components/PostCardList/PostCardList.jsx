@@ -7,9 +7,11 @@ import Shimmer from "../Shimmer/Shimmer";
 function PostCardList() {
 
     const [posts, setPosts] = useState([]);
+    const fallbackimage = 'https://avatars.githubusercontent.com/u/113880768?v=4'
+
+    // whenever in the url you see a : colon it means its variable quantity
 
     
-
     useEffect(() => {
        // we will download the content from dummyapi.io
        
@@ -19,10 +21,14 @@ function PostCardList() {
        })
        .then(response => {
          const responseObject = response.data;
-         console.log(responseObject.data);
+        console.log(responseObject.data);
+        
+
         //   console.log(import.meta.env.VITE_APP_ID)
 
          setPosts([...responseObject.data])
+       
+         
        })
 
     }, [])
@@ -37,8 +43,9 @@ function PostCardList() {
         <PostCard
         key={post.id}
         content={post.text}
-        image={post.image}
+        image={(post.image)}
         authorFirstName={post.owner.firstName}
+        likes={post.likes}
         suck={fullName}
 
         />
@@ -46,5 +53,7 @@ function PostCardList() {
    })
 )
 }
+
+
 
 export default PostCardList;
