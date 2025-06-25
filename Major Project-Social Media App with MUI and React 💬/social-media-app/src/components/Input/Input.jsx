@@ -1,16 +1,18 @@
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
+import PostsContext from "../../providers/PostsProvider";
 
 function Input() {
     const [postText, setPostText] = useState("");
     const [imageUrl, setImageUrl] = useState("");
-    const [loading, setLoading] = useState("")
-    const [OwnerName, setOwnerName] = useState("")
+    const [loading, setLoading] = useState(false);
+    const {posts, setPosts} = useContext(PostsContext)
 
 
+ 
     async function createPost() {
         setLoading(true)
         
@@ -21,8 +23,7 @@ function Input() {
                 image: imageUrl,
                 likes: 0,
                 publishDate: new Date(),
-                firstName: OwnerName,
-                lastName: OwnerName
+               
 
             }
             , {
@@ -30,10 +31,11 @@ function Input() {
         })
         .then(response => {
             console.log(response.data);
+            setPosts([ response.data, ...posts])
             setLoading(false);
             setPostText("");
             setImageUrl("");
-            setOwnerName("")
+           
         })
        
     }
@@ -45,15 +47,7 @@ function Input() {
     return(
         <Box sx={{mt: '2rem'}}>
 
-             <TextField 
-         fullWidth 
-         id="outlined-basic" 
-         label="Your name" 
-         sx={{mb: '1rem'}}
-         value={OwnerName}
-         onChange={(e) => setOwnerName(e.target.value)}
          
-         variant="outlined" />
 
 
          <TextField 
@@ -77,7 +71,7 @@ function Input() {
          {
             (!loading) ?   
             <Button 
-            disabled={postText.trim() === "" || imageUrl.trim() === "" || OwnerName.trim() === ""}
+            disabled={postText.trim() === "" || imageUrl.trim() === "" }
             variant="contained" 
             onClick={createPost}>
                 Submit

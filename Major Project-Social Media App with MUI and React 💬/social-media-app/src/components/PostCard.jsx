@@ -10,12 +10,13 @@ import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { useState } from 'react';
+import React, {useState } from 'react';
 
 
 
-export default function PostCard({authorFirstName,suck, image, content, likes}) {
+function PostCard({authorFirstName,suck, image, content, likes}) {
   const [isLiked, setIsLiked] = useState(false)
+  const [likecount, setlikecount] = useState(likes);
   return (
     <Card sx={{ maxWidth: 345, mb: '3rem' }}>
       <CardHeader
@@ -46,12 +47,19 @@ export default function PostCard({authorFirstName,suck, image, content, likes}) 
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites" onClick={() => setIsLiked(!isLiked) }>
+        <IconButton aria-label="add to favorites" onClick={() => 
+        {
+          setIsLiked(!isLiked),
+          setlikecount(likes)
+
+        } }>
           {
             (isLiked) ? <FavoriteIcon sx={{color: red[500]}}   /> : <FavoriteBorderIcon  />
             // sx prop is used for custom styling just like inline styling css using with
           }
-          {likes}
+          {
+            (isLiked) ? (likecount+1) : (likecount)
+          }
         </IconButton>
      
        
@@ -60,3 +68,5 @@ export default function PostCard({authorFirstName,suck, image, content, likes}) 
     </Card>
   );
 }
+
+export default React.memo(PostCard);
