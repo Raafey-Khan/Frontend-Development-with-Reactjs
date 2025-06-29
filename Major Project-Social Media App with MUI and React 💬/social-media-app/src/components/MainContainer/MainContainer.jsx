@@ -17,6 +17,7 @@ export default function MainContainer() {
         alignItems={'center'} 
         justifyContent={'center'} 
         direction='column' 
+        
         size={{ md: 8}}>
             {/* Posts */}
             <PostCardList />

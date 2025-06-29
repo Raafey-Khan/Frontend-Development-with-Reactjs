@@ -7,7 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Shimmer from '../Shimmer/Shimmer';
-
+import { Link } from 'react-router-dom';
 export default function CheckboxListSecondary() {
 
     const[users, setUsers] = useState([]);
@@ -40,7 +40,8 @@ export default function CheckboxListSecondary() {
        
             disablePadding
           >
-            <ListItemButton>
+            <Link to={`/user/${user.id}`}>
+              <ListItemButton>
               <ListItemAvatar>
                 <Avatar
                   alt={`Avatar n°${user.firstName}`}
@@ -49,6 +50,8 @@ export default function CheckboxListSecondary() {
               </ListItemAvatar>
               <ListItemText id={labelId} primary={user.firstName + " " + user.lastName}  />
             </ListItemButton>
+            </Link>
+          
           </ListItem>
         );
       })}  

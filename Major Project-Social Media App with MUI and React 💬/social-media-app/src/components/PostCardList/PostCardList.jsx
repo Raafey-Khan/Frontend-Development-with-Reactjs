@@ -19,6 +19,7 @@ function PostCardList() {
         image={(post.image)}
         authorFirstName={post.owner.firstName}
         likes={post.likes}
+        
         suck={fullName}
 
         />
