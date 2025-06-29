@@ -2,21 +2,10 @@
 import Input from './Input/Input';
 import MainContainer from './MainContainer/MainContainer'
 import PostsContext from '../providers/PostsProvider';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import usePosts from '../hooks/usePosts';
 function SocialApp() {
+   const [posts, setPosts] = usePosts();
    
-   const [posts, setPosts] = useState([])
-   useEffect(() => {
-      axios.get("https://dummyapi.io/data/v1/post", {
-         headers: {'app-id': import.meta.env.VITE_APP_ID}
-      })
-      .then(response => {
-         const responseObject = response.data;
-         console.log(responseObject);
-         setPosts([...responseObject.data])
-      })
-   },[]) 
    return (
     <div>
       
