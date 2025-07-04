@@ -1,0 +1,25 @@
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header-text{
+    letter-spacing: 0.4rem;
+    font-size: 2rem;
+    color: var(--light-purple);
+
+}
+
+.header-image-wrapper {
+    height: 300px;
+    width:  auto;
+  
+}
+
+.header-image{
+    max-width: 100%;
+    max-width: 100%;
+}

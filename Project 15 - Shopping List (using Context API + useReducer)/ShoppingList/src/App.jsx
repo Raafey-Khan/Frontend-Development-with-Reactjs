@@ -1,10 +1,11 @@
 import './App.css'
+import ShoppingList from './components/ShoppingLIst/ShoppingList'
 
 function App() {
 
   return (
     <>
-hello
+<ShoppingList/>
     </>
   )
 }
