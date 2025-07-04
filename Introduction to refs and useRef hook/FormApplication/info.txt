@@ -1,0 +1,48 @@
+// 3 ways to handle validation of form in React
+
+// 1  Full Fledget 3rd Party Libraries React hook form
+// 2. Controlled Components
+// 3. Uncontrolled Components
+
+
+
+// Controlled Components
+
+/*
+ it involves manual state management , which can cause irrelavant re-renders
+ when using a controlled component you write an event handler for way your data can change
+ Controlled components also require you to mantain
+ all the validatin logic
+ Controled components are predictable
+ The defualt and recommended way to handle form validation is Controlled Components
+
+
+
+// Uncomtrolled Components
+ the form data handled by DOM itself
+ we dont manage any states in the uncontrolled components
+ Instead of managing a state you manage a ref
+ and the value we get from the ref --> ref.current.value
+ They depend on DOM
+ Aare not predictable because, during the lifecycle of component the form
+ elements can lose thier refrence and may be changed/affected by ohter sources
+*/
+
+
+What are Escape hatches
+Like if you want to do DOM manipulation using React
+you can do using these things thats why they call escape hatches
+
+
+Refs are an escape hatch
+
+
+You should only use useRefs when you have to step outside React
+
+
+Common examples of this include manaing focus, scroll position, or calling browser APIs
+that React does not expose
+
+
+if you stick to non-destructive actions like focusing and scrolling, you shouldn't encounter any problems.
+Howerver,if you try to modify the DOM manually. you can risk confliction with the changes React is making.

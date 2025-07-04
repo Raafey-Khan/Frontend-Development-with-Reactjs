@@ -1,3 +1,7 @@
 .wrapper{
     margin-bottom: 1rem;
 }
+
+.none{
+    display: none;
+}

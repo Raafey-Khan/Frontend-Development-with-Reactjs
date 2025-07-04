@@ -1,82 +1,166 @@
 import './Form.css';
-import { useEffect, useRef, useState } from 'react';
-import validatePassword from '../../helper/passwordValidator';
-import validateEmail from '../../helper/emailValidator';
+import Input from '../Input/Input';
+import { useContext, useRef, useState } from 'react';
+import { FormContext } from '../../providers/FormContext';
+import emailValidator from '../../helper/emailValidator';
+import passwordValidator from '../../helper/passwordValidator';
 
 function Form() {
+
+
+
+
+    const {formInput} = useContext(FormContext);
+
+
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
+    const usernameRef = useRef(null);
+    const addressRef = useRef(null)
 
-    useEffect(() => {
-        console.log(emailRef.current);
-        console.log(passwordRef.current);
-    }, []);
 
-    const [formValues, setFormValues] = useState({
-        email: "",
-        password: ""
-    });
+    const [step, setStep] = useState(1);
 
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-        handleValidateEmail();
-        handleValidatePassword();
-        console.log(formValues);
-    };
 
-    const handleValidatePassword = () => {
-        const password = formValues.password;
+   const handleFormSubmit = (event) => {
 
-        if (!validatePassword(password)) {
-            if(passwordRef.current){
-                passwordRef.current.focus();
-            }
-            console.log("Password doesn't contain required parameters");
+    event.preventDefault();
+
+    handleInvalidEmail();
+    handleInvalidPassword();
+    
+    
+    
+   }
+    const handleInvalidEmail = () => {
+        if(!emailValidator(formInput.email)){
+            emailRef.current.setInvalid();
+            emailRef.current.shake();
         }
-    };
+    }
 
-    const handleValidateEmail = () => {
-        const email = formValues.email;
-
-        if (!validateEmail(email)) {
-            if (emailRef.current) {
-                emailRef.current.focus();
-            }
-            console.log("Email doesn't contain required parameters");
+    const handleInvalidPassword = () => {
+        if(!passwordValidator(formInput.password)) {
+            passwordRef.current.setInvalid();
+            passwordRef.current.shake();
         }
-    };
+    }
 
-    return (
+    if(step == 1){
+
+         return (
         <div>
             New Form <br />
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit} noValidate>
                 <div className="wrapper email-input-wrapper">
-                    <input
-                        ref={emailRef}
-                        id="email-input"
-                        type="text"
-                        value={formValues.email}
-                        onChange={(event) =>
-                            setFormValues({ ...formValues, email: event.target.value })
-                        }
+            
+                    <Input
+                    id="email-input"
+                    type="email"
+                    label="email"
+                    ref={emailRef}
+                    key={1}
+                    placeholder='email'
+                    checkOnBlur={handleInvalidEmail}
+                    
                     />
                 </div>
 
                 <div className="wrapper password-input-wrapper">
-                    <input
-                        id="password-input"
-                        type="password"
-                        value={formValues.password}
-                        onChange={(event) =>
-                            setFormValues({ ...formValues, password: event.target.value })
-                        }
+                
+                    <Input
+                    id="password-input"
+                    type="password"
+                    label="password"
+                    ref={passwordRef}
+                    key={2}
+                    placeholder='password'
+                    checkOnBlur={handleInvalidPassword}
                     />
                 </div>
 
                 <input id="submit-input" type="submit" />
             </form>
+
+            <button onClick={() => {
+                setStep(step+1)
+            }}>
+                Next
+            </button>
         </div>
     );
+
+    } else if (step == 2) {
+         return (
+        <div>
+            New Form <br />
+            <form onSubmit={handleFormSubmit} noValidate>
+                <div className="wrapper email-input-wrapper">
+            
+                    <Input
+                    id="username-input"
+                    type="text"
+                    label="username"
+                    key={3}
+                    placeholder='username'
+                    ref={usernameRef}
+                    checkOnBlur={() => console.log("empty") }
+                    
+                    />
+                </div>
+
+              
+
+                <input id="submit-input" type="submit" />
+            </form>
+
+            <button onClick={() => {
+                setStep(step+1)
+            }}>
+                Next
+            </button>
+
+            <button onClick={() => {
+                setStep(step-1)
+            }}>
+                Prev
+            </button>
+        </div>
+    );
+    } else if(step == 3){
+         return (
+        <div>
+            New Form <br />
+            <form onSubmit={handleFormSubmit} noValidate>
+
+                <div className="wrapper password-input-wrapper">
+                
+                    <Input
+                    id="address-input"
+                    type="text"
+                    label="address"
+                    ref={addressRef}
+                    key={4}
+                    placeholder="adress"
+                    checkOnBlur={handleInvalidPassword}
+                    />
+                </div>
+
+                <input id="submit-input" type="submit" />
+            </form>
+
+             <button onClick={() => {
+                setStep(step-1)
+            }}>
+                Prev
+            </button>
+
+            <input id="submit-input" type="submit" />
+        </div>
+    );
+    }
+
+   
 }
 
 export default Form;
