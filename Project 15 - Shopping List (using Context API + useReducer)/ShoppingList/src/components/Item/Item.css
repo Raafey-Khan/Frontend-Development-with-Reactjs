@@ -1,0 +1,20 @@
+.item-wrapper{
+    display: flex;
+    width: 100%;
+
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+  
+
+}
+
+.item-name{
+    flex-basis: 80%;
+    font-size: x-large;
+}
+
+.item-quantity{
+    font-size: x-large;
+    color: blue;
+}
