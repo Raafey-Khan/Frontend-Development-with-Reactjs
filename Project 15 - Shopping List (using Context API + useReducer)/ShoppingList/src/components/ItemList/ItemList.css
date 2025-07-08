@@ -3,3 +3,30 @@
     min-width: 80%;
    
 }
+
+.items-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+ 
+}
+
+.change-quantity{
+    padding: 1rem;
+    border-radius: 100%;
+    font-size: small;
+}
+
+.add-item{
+    background-color: var(--light-blue);
+    color: white;
+}
+
+.remove-item{
+    background-color: grey;
+    color: white;
+}
+
+.change-quantity:hover{
+    color: black;
+}

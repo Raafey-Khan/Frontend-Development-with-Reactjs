@@ -1,0 +1,10 @@
+we are using the UUID
+
+its universal unique identifier
+
+
+the uuid is used to generate unique string
+
+and the string is often employed as a key prop for elements
+rendered in lists, as required by React's reconciliation algorithm
+

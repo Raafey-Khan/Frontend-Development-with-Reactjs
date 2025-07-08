@@ -1,7 +1,7 @@
 // CSS imports
 import './Item.css'
-
-
+import React from 'react';
+import { memo } from 'react';
  function Item({itemName, quantity}) {
  
   return (
@@ -16,4 +16,4 @@ import './Item.css'
   )
 }
 
-export default Item;
+export default React.memo(Item);
