@@ -1,5 +1,8 @@
 import {v4 as uuidv4} from 'uuid';
+  // console.log(uuidv4());
+  // everything when uuidv4 called you get a new id
 
+  
 function itemReducer(shoppingItems, action){ //action --> {type: 'add_item'}
     if(action.type == 'add_item'){
 

@@ -2,19 +2,23 @@
 import './ItemList.css';
 // Components import
 import Item from '../Item/Item';
-import React from 'react';
-import {memo} from 'react'
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 
+// Context imports
+
+import {ShoppingItemsContext, ShoppingDispatchContext} from '../../providers/ShoppingContext'
+
 // utils
 import { showError } from '../../utils/showToasts';
 
- function ItemList({shoppingItems, addQuantity, deleteQuantity}) {
+ function ItemList() {
+   
+    const shoppingItems = useContext(ShoppingItemsContext)
+    const dispach = useContext(ShoppingDispatchContext)
 
- 
-  
   return (
     <div className="shopping-items-wrapper">
         { 
@@ -23,7 +27,7 @@ import { showError } from '../../utils/showToasts';
                 return(
                    <div key={item.id} className='items-list'>
                     <div className='change-quantity add-item'
-                    onClick={() => addQuantity(item.id)}
+                    onClick={() => dispach({type: 'increment_item', itemId: item.id})}
                     >
                         
                         <FontAwesomeIcon icon={faPlus} />
@@ -37,7 +41,7 @@ import { showError } from '../../utils/showToasts';
                     <div className='change-quantity remove-item'
                     onClick={() => {
                         if(item.quantity == 0) showError(`${item.name} removed from the list`)
-                        deleteQuantity(item.id);
+                        dispach({type: 'decrement_item', itemId: item.id})
                     }}
                     >
                          <FontAwesomeIcon icon={faMinus} />
