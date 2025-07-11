@@ -21,6 +21,7 @@ import { showError } from '../../utils/showToasts';
 
   return (
     <div className="shopping-items-wrapper">
+        
         { 
         // Saving the app from crashing by && operator
             shoppingItems && shoppingItems.map(item => {
