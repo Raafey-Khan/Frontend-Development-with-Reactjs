@@ -1,0 +1,16 @@
+What is a Query?
+
+A query is a declarative dependency on a asynchronous source of data that
+is tied to unique key. A query can be used with any Promise 
+based method (including GET and POST methods) to fetch data from 
+a server if our method modifies data on the server, we recommended
+using Muataions instead.
+
+useQuery - we use useQuery to fetch data from the server
+
+useMuatations - we use UseMutations in order to modifies data on ther server
+
+
+How useQuery works
+first argument unique key
+second argument a function returning promise
