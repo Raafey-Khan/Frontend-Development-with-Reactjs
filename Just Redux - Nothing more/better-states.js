@@ -6,7 +6,10 @@
 // they going to convert the data in the state its simple for us
 // to store in the state then making easty to perform further actions 
 
+import {createStore, combineReducers} from 'redux'
+
 const state = {
+    
     users: [
         {
             id: 1,
@@ -75,8 +78,11 @@ const state = {
 //     return state;
 // }
 
-function userReducer(users = [], action){
-    if(action.type == 'ADD_USER'){
+const ADD_USER = 'ADD_USER';
+const EDIT_TODO = 'EDIT_TODO';
+
+function userReducer(users = state.users, action){
+    if(action.type == ADD_USER ){
         let newUser = {id: action.userId, name: action.userName}
         let newUsers = [...users, newUser];
         return newUsers;
@@ -85,8 +91,9 @@ function userReducer(users = [], action){
     return users;
 }
 
-function todoReducer(todos = [], action) {
-    if(action.type == 'EDIT_TODO') {
+
+function todoReducer(todos = state.todos, action) {
+    if(action.type == EDIT_TODO) {
         let newTodos = todos.map(todo => {
             if(todo.todoId == action.todoId && todo.userId == action.userId){
                 todo.name = action.name
@@ -100,3 +107,13 @@ function todoReducer(todos = [], action) {
 
 // use complex logic once
 // use easy logic everywere
+
+
+const combinedReducer = combineReducers({users: userReducer, todos: todoReducer});
+
+const store = createStore(combinedReducer);
+console.log(store.getState());
+
+store.dispatch({type: 'ADD_USER', userId: 5, userName: 'sanket'});
+
+console.log(store.getState());
