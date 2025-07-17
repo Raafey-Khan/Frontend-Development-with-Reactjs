@@ -1,5 +1,5 @@
-import {createStore} from 'redux'
-
+import {createStore, bindActionCreators} from 'redux'
+//                    bind our action creators to use this instead of store.dispatch()
 
 function demoReducer(state, action){
     if(action.type == 'add_item'){
@@ -19,12 +19,21 @@ const initialState = [{name: 'apple'}, {name: 'rice'}]
 
 const store = createStore(demoReducer, initialState);
 
+store.subscribe(() => console.log("State might change"))
+
+
+const actions = bindActionCreators({add_item}, store.dispatch)
+                        //    bind action <-- store dispacth tells
+
+console.log(actions);
 console.log(store.getState());
 
-store.dispatch(add_item('Banana'))
+actions.add_item('Banana')
 
 console.log(store.getState());
 
-store.dispatch(add_item('Mango'));
+actions.add_item('Mango', 3)
 
 console.log(store.getState());
+
+// store.dispatch({type: 'unknown'}); // still subscribe called if the dispatch called
