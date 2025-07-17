@@ -26,8 +26,23 @@ const state = {
     ],
 }
 
-function reducer(state, action){
-    if(action.type == 'EDI_TODO'){
-        
-    }
-}
+// Bad code
+
+// function reducer(state, action){
+//     if(action.type == 'EDIT_TODO'){
+//         let newTodoData = action.name;
+//         const newState = state.map(user => {
+//             if(user.id == action.userId) {
+//               let newTodos = user.todos.map(todo => {
+//                     if(todo.id == action.todoId) {
+//                         todo.name = newTodoData;
+//                     }
+//                     return todo;
+//                 });
+//                 user.todo = newTodos;
+//             }
+//             return user;
+//         })
+//     }
+// }
+
