@@ -1,11 +1,12 @@
 import {ADD_TODO, EDIT_TODO, REMOVE_TODO} from '../constants/index'
 
-const initialTodos = [
-    {id: 1, title: 'todo 1'},
-    {id: 2, title: 'todo 2'}
-]
+// const initialTodos = [
+//     {id: 1, title: 'todo 1'},
+//     {id: 2, title: 'todo 2'},
+   
+// ]
 
-function todoReducer(todos = initialTodos, action){
+function todoReducer(todos = [] , action){
     if(action.type === ADD_TODO){
         return [...todos, {id: action.payload.id, title: action.payload.title}]
     }
