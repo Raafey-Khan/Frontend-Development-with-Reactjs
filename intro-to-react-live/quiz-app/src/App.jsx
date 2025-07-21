@@ -13,9 +13,12 @@ function App() {
         { answer: 'O(n)', isCorrect: false },
         { answer: 'O(logn)', isCorrect: true },
         { answer: 'O(nlog)', isCorrect: false },
-        { answer: 'O(1)', isCorrect: false }
+        { answer: 'O(1)', isCorrect: false },
+        
       ]
+
     },
+
     {
       question: "What is the complexity of linear search?",
       options: [
@@ -40,6 +43,7 @@ function App() {
     if (isCorrect) {
       success('This is a correct answer');
       setShowFirstQuestion(true);
+  
     } else {
       reject('This is an incorrect answer');
     }
