@@ -2,9 +2,13 @@ import './App.css';
 import { ToastContainer } from 'react-toastify';
 import { success, reject } from './toast/toast';
 import { useState } from 'react';
-
+import AnswerSection from './components/AnswerSection';
+import GeoLocation from './components/GeoLocation/GeoLocation';
 function App() {
-  const [showFirstQuestion, setShowFirstQuestion] = useState(true);
+
+  console.log('Rendered');
+
+  let [currentQuestion, setCurrentQuestion] = useState(0);
 
   const quizQuestions = [
     {
@@ -18,7 +22,7 @@ function App() {
       ]
 
     },
-
+ 
     {
       question: "What is the complexity of linear search?",
       options: [
@@ -30,55 +34,41 @@ function App() {
     }
   ];
 
-  function answerHandler(isCorrect) {
-    if (isCorrect) {
-      success('This is a correct answer');
-      setShowFirstQuestion(false);
-    } else {
-      reject('This is an incorrect answer');
-    }
+  function onNextClick(){
+    if(currentQuestion == quizQuestions.length - 1) return;
+    setCurrentQuestion(currentQuestion + 1);
   }
 
-    function answerHandler1(isCorrect) {
-    if (isCorrect) {
-      success('This is a correct answer');
-      setShowFirstQuestion(true);
-  
+
+  function checkAnswer(option){
+    if(option.isCorrect){
+      console.log("Correct answer");
     } else {
-      reject('This is an incorrect answer');
+      console.log("Wrong answer");
     }
   }
 
   return (
     <>
-      {showFirstQuestion ? (
-        <>
-          <h1>{quizQuestions[0].question}</h1>
-          {quizQuestions[0].options.map((option, index) => (
-            <button
-              key={index}
-              onClick={() => answerHandler(option.isCorrect)}
-              style={{ margin: '1.4rem' }}
-            >
-              {option.answer}
-            </button>
-          ))}
-        </>
-      ) : (
-        <>
-          <h1>{quizQuestions[1].question}</h1>
-          {quizQuestions[1].options.map((option, index) => (
-            <button
-              key={index}
-              onClick={() => answerHandler1(option.isCorrect)}
-              style={{ margin: '1.4rem' }}
-            >
-              {option.answer}
-            </button>
-          ))}
-        </>
-      )}
-      <ToastContainer />
+    <div className="card-wrapper">
+      <GeoLocation/>
+      <div className="app">
+        <div className="question-section">
+          <div className="question-count">
+            <span>Question {currentQuestion + 1}</span> / {quizQuestions.length};
+          </div>
+          <div className="question-text">
+            {quizQuestions[currentQuestion].question}
+          </div>
+        </div>
+
+
+        <AnswerSection question={quizQuestions[currentQuestion]} onAnswerClick={checkAnswer} />
+    
+
+      </div>
+      <button onClick={onNextClick}>Next</button>
+    </div>
     </>
   );
 }
