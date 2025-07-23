@@ -1,9 +1,10 @@
 import './App.css';
-import { ToastContainer } from 'react-toastify';
-import { success, reject } from './toast/toast';
+
 import { useState } from 'react';
 import AnswerSection from './components/AnswerSection';
 import GeoLocation from './components/GeoLocation/GeoLocation';
+import GeoLocationContainer from './components/GeoLocation/GeolocationContainer';
+import GeoLocationNewUi from './components/GeoLocation/GeolocationNewUi';
 function App() {
 
   console.log('Rendered');
@@ -51,7 +52,10 @@ function App() {
   return (
     <>
     <div className="card-wrapper">
-      <GeoLocation/>
+      <GeoLocationContainer>
+        <GeoLocation/>
+        <GeoLocationNewUi/>
+      </GeoLocationContainer>
       <div className="app">
         <div className="question-section">
           <div className="question-count">
