@@ -5,11 +5,14 @@ import AnswerSection from './components/AnswerSection';
 import GeoLocation from './components/GeoLocation/GeoLocation';
 import GeoLocationContainer from './components/GeoLocation/GeolocationContainer';
 import GeoLocationNewUi from './components/GeoLocation/GeolocationNewUi';
+import useCoordinates from './components/hooks/useCoordinates';
+
 function App() {
 
   console.log('Rendered');
 
   let [currentQuestion, setCurrentQuestion] = useState(0);
+  const [latitude, longitude] = useCoordinates();
 
   const quizQuestions = [
     {
@@ -52,9 +55,9 @@ function App() {
   return (
     <>
     <div className="card-wrapper">
-      <GeoLocationContainer>
-        <GeoLocation/>
-        <GeoLocationNewUi/>
+      <GeoLocationContainer >
+        <GeoLocation latitude={latitude} longitude={longitude}/>
+        <GeoLocationNewUi latitude={latitude} longitude={longitude} />
       </GeoLocationContainer>
       <div className="app">
         <div className="question-section">
