@@ -1,6 +1,9 @@
+import useCoordinates from "../hooks/useCoordinates"
 
 
-export default function GeoLocation({latitude, longitude}){
+export default function GeoLocation(){
+
+    const [latitude, longitude] = useCoordinates();
 
     return(
          <div>
