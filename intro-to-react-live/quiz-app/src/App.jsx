@@ -1,18 +1,16 @@
 import './App.css';
 
 import { useState } from 'react';
-import AnswerSection from './components/AnswerSection';
-import GeoLocation from './components/GeoLocation/GeoLocation';
-import GeoLocationContainer from './components/GeoLocation/GeolocationContainer';
-import GeoLocationNewUi from './components/GeoLocation/GeolocationNewUi';
-import useCoordinates from './components/hooks/useCoordinates';
+import AnswerSection from './components/GeoLocation/AnswerSection';
 
+import GeoLocationNewUi from './components/GeoLocation/GeolocationNewUi';
+import GeoLocationContainer from './components/GeoLocation/GeolocationContainer';
+import Geolocation from './components/GeoLocation/GeoLocation'
 function App() {
 
   console.log('Rendered');
 
   let [currentQuestion, setCurrentQuestion] = useState(0);
-  const [latitude, longitude] = useCoordinates();
 
   const quizQuestions = [
     {
@@ -52,13 +50,12 @@ function App() {
     }
   }
 
+  const NewUiGeolocation = GeoLocationContainer(Geolocation);
+
   return (
     <>
     <div className="card-wrapper">
-      <GeoLocationContainer >
-        <GeoLocation latitude={latitude} longitude={longitude}/>
-        <GeoLocationNewUi latitude={latitude} longitude={longitude} />
-      </GeoLocationContainer>
+      <NewUiGeolocation/>
       <div className="app">
         <div className="question-section">
           <div className="question-count">

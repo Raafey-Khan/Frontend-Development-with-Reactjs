@@ -1,23 +1,12 @@
+import useCoordinates from "../hooks/useCoordinates";
 
-export default function GeoLocationContainer({ children }){
- 
+export default function GeoLocationContainer(BaseContainer){
 
+    const [latitude, longitude] = useCoordinates();
 
-    return(
-        <div>
-            {children}
-           
-        </div>
-        // this is a children prop in react
-        // creates this Geolocation Container Component a Wrapper for containing
-        // children components
-    )
-
-    
+    return function EnhancedGeoLocation(props){
+        return(
+            <BaseContainer {...props} latitude={latitude} longitude={longitude} />
+        )
+    }
 }
-
-
-// Separtion of Concerns
-
-
-// ---> Presentation Layer(UI), --> Container Layer (Logic)
