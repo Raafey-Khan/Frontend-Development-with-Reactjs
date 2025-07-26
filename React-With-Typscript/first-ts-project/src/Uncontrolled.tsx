@@ -8,6 +8,7 @@ const Uncontrolled: FC = () => {
         console.log(firstNameRef.current.value);
 
     };
+    
 
     const firstNameRef = useRef(null);
 
